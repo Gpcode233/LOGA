@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Spiritual growth and life-giving community foundation */
+  --color-primary: #2E7D32; /* green-800 */
+  --color-primary-50: #E8F5E8;
+  --color-primary-100: #C8E6C9; /* green-100 */
+  --color-primary-200: #A5D6A7; /* green-200 */
+  --color-primary-300: #81C784; /* green-300 */
+  --color-primary-400: #66BB6A; /* green-400 */
+  --color-primary-500: #4CAF50; /* green-500 */
+  --color-primary-600: #43A047; /* green-600 */
+  --color-primary-700: #388E3C; /* green-700 */
+  --color-primary-800: #2E7D32; /* green-800 */
+  --color-primary-900: #1B5E20; /* green-900 */
+
+  /* Secondary Colors - Approachable warmth for interactive elements */
+  --color-secondary: #66BB6A; /* green-400 */
+  --color-secondary-50: #E8F5E8;
+  --color-secondary-100: #C8E6C9; /* green-100 */
+  --color-secondary-200: #A5D6A7; /* green-200 */
+  --color-secondary-300: #81C784; /* green-300 */
+  --color-secondary-400: #66BB6A; /* green-400 */
+  --color-secondary-500: #4CAF50; /* green-500 */
+
+  /* Accent Colors - Divine light moments and celebration highlights */
+  --color-accent: #FDD835; /* yellow-400 */
+  --color-accent-50: #FFFDE7; /* yellow-50 */
+  --color-accent-100: #FFF9C4; /* yellow-100 */
+  --color-accent-200: #FFF59D; /* yellow-200 */
+  --color-accent-300: #FFF176; /* yellow-300 */
+  --color-accent-400: #FDD835; /* yellow-400 */
+  --color-accent-500: #FBC02D; /* yellow-600 */
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F8F9FA; /* gray-50 */
+
+  /* Text Colors */
+  --color-text-primary: #1B5E20; /* green-900 */
+  --color-text-secondary: #4A4A4A; /* gray-600 */
+
+  /* Status Colors */
+  --color-success: #4CAF50; /* green-500 */
+  --color-warning: #FF9800; /* orange-500 */
+  --color-error: #E53935; /* red-600 */
+
+  /* Shadow Variables */
+  --shadow-card: 0 2px 8px rgba(46, 125, 50, 0.1);
+  --shadow-elevated: 0 4px 16px rgba(46, 125, 50, 0.15);
+  --shadow-strong: 0 8px 24px rgba(46, 125, 50, 0.2);
+
+  /* Border Variables */
+  --border-light: 1px solid #E8F5E8;
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+
+  /* Animation Variables */
+  --transition-fast: 300ms ease-out;
+  --transition-normal: 400ms ease-out;
+}
+
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+  }
+
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Button Components */
+.btn-primary  {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-poppins font-semibold;
+    @apply hover:bg-primary-700 transition-all duration-300;
+    
+  }
+.btn-secondary  {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-poppins font-semibold;
+    @apply hover:bg-secondary-500 transition-all duration-300;
+    
+  }
+.btn-accent  {
+    @apply bg-accent text-primary px-6 py-3 rounded-lg font-poppins font-semibold;
+    @apply hover:bg-accent-500 transition-all duration-300;
+    
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-poppins font-semibold;
+    @apply hover:bg-primary hover:text-white transition-all duration-300;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-lg p-6;
+    box-shadow: var(--shadow-card);
+    border: var(--border-light);
+    transition: var(--transition-fast);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-lg p-6;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Form Components */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-primary-100;
+    @apply focus:border-primary focus:ring-2 focus:ring-primary-100;
+    @apply transition-all duration-300 outline-none;
+    @apply font-open-sans text-text-primary;
+  }
+.form-textarea  {
+    @apply w-full px-4 py-3 rounded-lg border border-primary-100;
+    @apply focus:border-primary focus:ring-2 focus:ring-primary-100;
+    @apply transition-all duration-300 outline-none;
+    @apply font-open-sans text-text-primary min-h-[120px];
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-text-primary mb-2;
+    @apply font-open-sans;
+  }
+
+  /* Navigation Components */
+  .nav-link {
+    @apply text-text-primary hover:text-primary transition-colors duration-300;
+    @apply font-open-sans font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+
+  /* Content Components */
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Scripture Quote Styling */
+  .scripture-quote {
+    @apply font-accent text-lg italic text-primary-700;
+    @apply border-l-4 border-accent pl-6 py-4;
+    @apply bg-primary-50 rounded-r-lg;
+  }
+
+  /* Testimonial Styling */
+  .testimonial {
+    @apply bg-surface rounded-lg p-6 relative;
+    @apply border-l-4 border-secondary;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Hero Section */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(46, 125, 50, 0.9) 0%, 
+      rgba(102, 187, 106, 0.8) 100%);
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn var(--transition-normal) ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp var(--transition-normal) ease-out;
+  }
+
+  .scale-hover {
+    transition: transform var(--transition-fast);
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.02);
+  }
+}
+
+@layer utilities {
+  /* Custom Spacing */
+  .space-y-section > * + * {
+    margin-top: 4rem;
+  }
+
+  /* Custom Shadows */
+  .shadow-sanctuary {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-sanctuary-lg {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-sanctuary-xl {
+    box-shadow: var(--shadow-strong);
+  }
+
+  /* Custom Borders */
+  .border-sanctuary {
+    border: var(--border-light);
+  }
+
+  /* Contemplative Animations */
+  .transition-contemplative {
+    transition: var(--transition-fast);
+  }
+
+  .transition-contemplative-slow {
+    transition: var(--transition-normal);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    color: black !important;
+    background: white !important;
+  }
+}

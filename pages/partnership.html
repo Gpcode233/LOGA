@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us | Overwhelming Love Ministries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    </style>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init('9UwB99tPWFGjtbrUL');
+      })();
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="../images/logo11.jpg" alt="Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
+                <h1 class="text-xl font-bold text-green-800">Overwhelming Love Ministries</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-green-800 hover:text-yellow-500 transition">Home</a>
+                <a href="about_our_church.html" class="text-green-800 hover:text-yellow-500 transition">About</a>
+                <a href="ministry.html" class="text-green-800 hover:text-yellow-500 transition">Ministry</a>
+                <a href="gallery.html" class="text-green-800 hover:text-yellow-500 transition">Gallery</a>
+                <a href="partnership.html" class="text-green-800 hover:text-yellow-500 transition font-bold">Partnership</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[40vh] flex items-center justify-center text-white relative" style="background: linear-gradient(rgba(46,125,50,0.8), rgba(46,125,50,0.8)), url('../images/loga-hero.jpeg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Partner With Us</h1>
+            <p class="text-xl md:text-2xl mb-4">Join us in advancing God's kingdom and transforming lives</p>
+        </div>
+    </section>
+    <!-- Partnership Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">PARTNERSHIP FORM</h2>
+            <form id="partnership-form" class="bg-gray-50 p-8 rounded-lg shadow-md space-y-6">
+                <!-- Personal Information -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-4">Personal Information</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2 font-semibold">NAME:</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="address" class="block text-gray-700 mb-2 font-semibold">RESIDENTIAL ADDRESS:</label>
+                            <div class="relative">
+                                <i class="fas fa-home absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="text" id="address" name="address" placeholder="Enter your residential address" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2 font-semibold">PHONE:</label>
+                            <div class="relative">
+                                <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="whatsapp" class="block text-gray-700 mb-2 font-semibold">WHATSAPP NUMBER:</label>
+                            <div class="relative">
+                                <i class="fab fa-whatsapp absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2 font-semibold">EMAIL:</label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="birthday" class="block text-gray-700 mb-2 font-semibold">BIRTHDAY:</label>
+                            <div class="relative">
+                                <i class="fas fa-calendar absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="date" id="birthday" name="birthday" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="sex" class="block text-gray-700 mb-2 font-semibold">SEX:</label>
+                            <div class="relative">
+                                <i class="fas fa-venus-mars absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <select id="sex" name="sex" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="marital_status" class="block text-gray-700 mb-2 font-semibold">MARITAL STATUS:</label>
+                            <div class="relative">
+                                <i class="fas fa-heart absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <select id="marital_status" name="marital_status" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                                    <option value="">Select Status</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="divorced">Divorced</option>
+                                    <option value="widowed">Widowed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="occupation" class="block text-gray-700 mb-2 font-semibold">OCCUPATION:</label>
+                            <div class="relative">
+                                <i class="fas fa-briefcase absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="church" class="block text-gray-700 mb-2 font-semibold">NAME OF YOUR CHURCH:</label>
+                            <div class="relative">
+                                <i class="fas fa-church absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600"></i>
+                                <input type="text" id="church" name="church" placeholder="Enter your church name" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership Categories -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-4">PARTNERSHIP CATEGORIES (TICK THE APPROPRIATE BOX)</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-green-700 mb-2"><i class="fas fa-cross mr-2"></i>1). SOUL WINNING</h4>
+                            <div class="ml-4 space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="gospel_marshals" value="Gospel Marshals" class="mr-2">
+                                    <span>a). GOSPEL MARSHALS</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="voice_of_truth" value="Voice of Truth" class="mr-2">
+                                    <span>b). VOICE OF TRUTH</span>
+                                </label>
+                                <div class="ml-4">
+                                    <h5 class="font-semibold text-green-600 mb-1">c). MEDIA EVANGELISM</h5>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="eternal_matters" value="Eternal Matters" class="mr-2">
+                                        <span>ETERNAL MATTERS</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="loga_media" value="LOGA Media" class="mr-2">
+                                        <span>LOGA MEDIA</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="radio_outreach" value="Radio Outreach" class="mr-2">
+                                        <span>RADIO OUTREACH</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="discipleship" value="Discipleship" class="mr-2">
+                                <span class="text-lg font-bold text-green-700"><i class="fas fa-book-open mr-2"></i>2). DISCIPLESHIP</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="missions" value="Missions" class="mr-2">
+                                <span class="text-lg font-bold text-green-700"><i class="fas fa-globe mr-2"></i>3). MISSIONS</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-green-700 mb-2"><i class="fas fa-hands-helping mr-2"></i>4). LOGA WELFARE SCHEME</h4>
+                            <div class="ml-4 space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="health" value="Health" class="mr-2">
+                                    <span>a). HEALTH</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="education" value="Education" class="mr-2">
+                                    <span>b). EDUCATION</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="empowerment" value="Empowerment" class="mr-2">
+                                    <span>c). EMPOWERMENT</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="palliatives" value="Palliatives" class="mr-2">
+                                    <span>d). PALLIATIVES</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" name="srm" value="SRM" class="mr-2">
+                                <span class="text-lg font-bold text-green-700"><i class="fas fa-graduation-cap mr-2"></i>5). STUDENTS REVIVAL MOVEMENT (SRM)</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-green-700 mb-2"><i class="fas fa-building mr-2"></i>6). CHURCH STRUCTURAL PROJECTS</h4>
+                            <div class="ml-4 space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="hall_admin" value="Hall/Admin Block" class="mr-2">
+                                    <span>a). Hall/admin block</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="bishops_court" value="Bishop's Court/Parsonage" class="mr-2">
+                                    <span>b). Bishop's court/parsonage</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="staff_quarters" value="Staff Quarters" class="mr-2">
+                                    <span>c). Staff quarters</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="students_hostel" value="Students Hostel" class="mr-2">
+                                    <span>d). Students hostel</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="skill_center" value="Skill Acquisition Center" class="mr-2">
+                                    <span>e). Skill acquisition center</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="generator" value="Lister Generator" class="mr-2">
+                                    <span>f). Lister Generator</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="evangelism_bus" value="Coaster Evangelism Bus" class="mr-2">
+                                    <span>g). Coaster evangelism bus</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Levels of Partnership -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-star mr-2"></i>LEVELS OF PARTNERSHIP (PLEASE TICK THE APPROPRIATE BOX)</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Copper" class="mr-2">
+                            <span>1). COPPER.......(#12 - #59,000)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Bronze" class="mr-2">
+                            <span>2). BRONZE.......(#60,000 - 150,000)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Silver" class="mr-2">
+                            <span>3). SILVER.........(151,000 - 499,000)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Gold" class="mr-2">
+                            <span>4). GOLD.........(#500,000 - 999,000)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Diamond" class="mr-2">
+                            <span>5). DIAMOND.....( #1m and above)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="partnership_level" value="Others (Materials)" class="mr-2">
+                            <span>6). OTHERS (MATERIALS)</span>
+                        </label>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">YOUR AMOUNT OF CATEGORY CAN BE BROKEN DOWN TO YOUR CONVENIENT MODE OF PAYMENT.</p>
+                </div>
+
+                <!-- Mode of Payment -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-credit-card mr-2"></i>MODE OF PAYMENT (please tick)</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="payment_mode" value="Monthly" class="mr-2">
+                            <span>1). MONTHLY</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="payment_mode" value="Bimonthly" class="mr-2">
+                            <span>2). BIMONTHLY</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="payment_mode" value="Quarterly" class="mr-2">
+                            <span>3). QUARTERLY</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="payment_mode" value="Annually" class="mr-2">
+                            <span>4). ANNUALLY</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-lg font-bold text-green-800 mb-4">WE APPRECIATE YOU IMMENSELY FOR PARTNERING WITH US.</p>
+                    <p class="text-sm text-gray-600 mb-6">
+                        RT REV'D LAWRENCE UBAOJI<br>
+                        PRESIDING BISHOP,<br>
+                        OVERWHELMING LOVE MINISTRIES.
+                    </p>
+                </div>
+
+                <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-4 px-8 rounded-lg transition text-lg">
+                    <i class="fas fa-paper-plane mr-2"></i>Submit Partnership Form
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+            <h2 class="text-3xl font-bold text-green-800 mb-6">CONTACT US</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <p class="text-gray-700 mb-4">
+                    <i class="fas fa-map-marker-alt mr-2 text-green-600"></i><strong>VICTORY BASE AUDITORIUM,</strong><br>
+                    ELEVATION GROUND, OBU-OFU UMUIKE AWKA, ANAMBRA STATE.
+                </p>
+                <p class="text-gray-700">
+                    <i class="fas fa-phone mr-2 text-green-600"></i><strong>Phone:</strong> 08063840895, 08036314623
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                            <img src="../images/logo11.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" />
+                        </div>
+                        <h3 class="text-xl font-bold">Overwhelming Love Ministries</h3>
+                    </div>
+                    <p class="text-green-200">Restoring the essence of life — God's love in the hearts of men.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-green-200 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="pages/about_our_church.html" class="text-green-200 hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="pages/ministry.html" class="text-green-200 hover:text-yellow-400 transition">Ministries</a></li>
+                        <li><a href="#contact" class="text-green-200 hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.facebook.com/lawrence.ubaoji" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bishoplawrenceubaoji?utm_source=ig_web_button_share_sheet&igsh=MW9wNDRidWxoY3FxdA==" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-green-200">Subscribe to our newsletter for updates</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-800">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-green-900 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+
+                <div class="text-center text-green-300 text-sm">
+                    &copy; 2025 Overwhelming Love Ministries (LOGA). All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // EmailJS integration for partnership form
+        document.getElementById('partnership-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Optionally, show a loading indicator here
+            emailjs.sendForm('service_nez46f5', 'template_7mlwxxr', this)
+              .then(function(response) {
+                 alert('Thank you for partnering with us! We will contact you soon.');
+                 document.getElementById('partnership-form').reset();
+              }, function(error) {
+                 alert('Oops! Something went wrong. Please try again.');
+              });
+        });
+    </script>
+</body>
+</html> 

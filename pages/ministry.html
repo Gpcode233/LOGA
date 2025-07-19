@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Ministries | Overwhelming Love Ministries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Timeline Animations */
+        .timeline-line {
+            position: relative;
+            overflow: visible;
+        }
+        
+        .timeline-circle {
+            z-index: 10;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .timeline-dot {
+            transition: all 0.3s ease;
+            z-index: 5;
+        }
+        
+        .timeline-item {
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .timeline-item.animate-fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-item.scale-105 {
+            transform: scale(1.02);
+        }
+        
+        /* Ruler markings animation */
+        .timeline-line > div {
+            animation: rulerGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes rulerGlow {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        
+        /* Staggered animation for ruler markings */
+        .timeline-line > div:nth-child(1) { animation-delay: 0s; }
+        .timeline-line > div:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-line > div:nth-child(3) { animation-delay: 0.4s; }
+        .timeline-line > div:nth-child(4) { animation-delay: 0.6s; }
+        .timeline-line > div:nth-child(5) { animation-delay: 0.8s; }
+        .timeline-line > div:nth-child(6) { animation-delay: 1s; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="../images/logo11.jpg" alt="Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
+                <h1 class="text-xl font-bold text-green-800">Overwhelming Love Ministries</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-green-800 hover:text-yellow-500 transition">Home</a>
+                <a href="about_our_church.html" class="text-green-800 hover:text-yellow-500 transition">About</a>
+                <a href="ministry.html" class="text-green-800 hover:text-yellow-500 transition font-bold">Ministry</a>
+                <a href="gallery.html" class="text-green-800 hover:text-yellow-500 transition">Gallery</a>
+                <a href="partnership.html" class="text-green-800 hover:text-yellow-500 transition">Partnership</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[40vh] flex items-center justify-center text-white relative" style="background: linear-gradient(rgba(46,125,50,0.8), rgba(46,125,50,0.8)), url('../images/loga-hero.jpeg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Our Ministries</h1>
+            <p class="text-xl md:text-2xl mb-4">Discover the arms of Overwhelming Love Ministries</p>
+        </div>
+    </section>
+    <!-- Ministries Overview -->
+    <!-- Ministries Section -->
+    <section id="ministries" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-16"><i class="fas fa-hands-helping mr-4"></i>Our Ministries</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ministry 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-bible text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Gospel Marshals</h3>
+                    <p class="text-gray-700">Our evangelism team dedicated to spreading the Gospel through street preaching, crusades, and personal witnessing.</p>
+                </div>
+                
+                <!-- Ministry 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Voice of Truth Publications</h3>
+                    <p class="text-gray-700">Publishing arm that produces books, tracts, and study materials to equip believers with sound biblical teaching.</p>
+                </div>
+                
+                <!-- Ministry 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-tv text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Eternal Matters</h3>
+                    <p class="text-gray-700">Media evangelism program airing on UNIZIK FM, bringing biblical truth to the airwaves every Friday at 7:30 PM.</p>
+                </div>
+                
+                <!-- Ministry 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-photo-film text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">LOGA Media</h3>
+                    <p class="text-gray-700">Our multimedia team responsible for capturing and sharing our ministry moments through photography and videography.</p>
+                </div>
+                
+                <!-- Ministry 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-tower-broadcast text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Radio Outreach</h3>
+                    <p class="text-gray-700">Broadcasting the message of hope through UNIZIK FM, reaching thousands with the transformative power of God's Word.</p>
+                </div>
+                
+                <!-- Ministry 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md transition card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Students Revival Movement</h3>
+                    <p class="text-gray-700">Tertiary arm focused on campus evangelism and discipleship, currently active at UNIZIK with plans to expand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discipleship Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-16"><i class="fas fa-book-open mr-4"></i>Raising Kingdom Change Agents</h2>
+            
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Animated Timeline Line with Ruler Markings -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-green-600 transform -translate-x-1/2 timeline-line">
+                    <!-- Ruler markings -->
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    <div class="absolute top-1/5 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    <div class="absolute top-2/5 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    <div class="absolute top-3/5 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    <div class="absolute top-4/5 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-green-600"></div>
+                    
+                    <!-- Animated sliding circle -->
+                    <div class="timeline-circle absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-600 rounded-full border-4 border-white shadow-lg transition-all duration-1000 ease-out">
+                        <div class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
+                    </div>
+                </div>
+                
+                <div class="space-y-16 relative">
+                    <!-- Item 1 -->
+                    <div class="timeline-item relative" data-section="1">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                                <h3 class="text-2xl font-bold text-green-800 mb-2"><i class="fas fa-graduation-cap mr-2"></i>Discipleship Class</h3>
+                                <p class="text-gray-700">Weekly classes designed to ground believers in foundational Christian doctrines and practical Christian living.</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/12 flex justify-center">
+                                <!-- Removed extra circle -->
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700"><i class="fas fa-quote-left mr-2 text-green-600"></i>"Therefore go and make disciples of all nations..." - Matthew 28:19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="timeline-item relative" data-section="2">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700"><i class="fas fa-quote-left mr-2 text-green-600"></i>"For the word of God is alive and active..." - Hebrews 4:12</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block md:w-1/12 flex justify-center">
+                                <!-- Removed extra circle -->
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <h3 class="text-2xl font-bold text-green-800 mb-2"><i class="fas fa-microphone mr-2"></i>Word Revolution Conference</h3>
+                                <p class="text-gray-700">Annual gathering focused on the transformative power of God's Word, featuring teachings from seasoned ministers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="timeline-item relative" data-section="3">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                                <h3 class="text-2xl font-bold text-green-800 mb-2"><i class="fas fa-heart mr-2"></i>Marriage Summit</h3>
+                                <p class="text-gray-700">Special event designed to strengthen marriages through biblical principles and practical relationship tools.</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/12 flex justify-center">
+                                <!-- Removed extra circle -->
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700"><i class="fas fa-quote-left mr-2 text-green-600"></i>"Therefore what God has joined together, let no one separate." - Mark 10:9</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="timeline-item relative" data-section="4">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700"><i class="fas fa-quote-left mr-2 text-green-600"></i>"How good and pleasant it is when God's people live together in unity!" - Psalm 133:1</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block md:w-1/12 flex justify-center">
+                                <!-- Removed extra circle -->
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <h3 class="text-2xl font-bold text-green-800 mb-2"><i class="fas fa-users mr-2"></i>LOGA Convention</h3>
+                                <p class="text-gray-700">Our annual family gathering featuring powerful worship, teaching, and fellowship with believers from all over.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="timeline-item relative" data-section="5">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 md:text-right">
+                                <h3 class="text-2xl font-bold text-green-800 mb-2"><i class="fas fa-briefcase mr-2"></i>Business Class</h3>
+                                <p class="text-gray-700">Equipping believers with biblical principles for success in business and entrepreneurship.</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/12 flex justify-center">
+                                <!-- Removed extra circle -->
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                                    <p class="text-gray-700"><i class="fas fa-quote-left mr-2 text-green-600"></i>"Whatever you do, work at it with all your heart, as working for the Lord..." - Colossians 3:23</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missions Section -->
+    <section class="py-20 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16"><i class="fas fa-globe mr-4"></i>Missions</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Mission 1 -->
+                <div class="bg-green-900 p-6 rounded-lg shadow-lg transition card-hover">
+                    <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-map-marked-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rural Missions</h3>
+                    <p>Bringing the Gospel to underserved rural communities through evangelistic outreaches and church planting.</p>
+                </div>
+                
+                <!-- Mission 2 -->
+                <div class="bg-green-900 p-6 rounded-lg shadow-lg transition card-hover">
+                    <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gospel and Relief Distribution</h3>
+                    <p>Combining evangelism with practical assistance by providing food, clothing, and essential supplies to those in need.</p>
+                </div>
+                
+                <!-- Mission 3 -->
+                <div class="bg-green-900 p-6 rounded-lg shadow-lg transition card-hover">
+                    <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-church text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Equipping Rural Churches</h3>
+                    <p>Supporting rural congregations with Bibles, sound equipment, and training for pastors and leaders.</p>
+                </div>
+                
+                <!-- Mission 4 -->
+                <div class="bg-green-900 p-6 rounded-lg shadow-lg transition card-hover">
+                    <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-home text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Property Support Initiatives</h3>
+                    <p>Assisting churches and ministries with land acquisition and building projects to establish permanent bases for ministry.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
+                    <i class="fas fa-heart mr-2"></i>Support Our Missions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welfare Scheme Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-16"><i class="fas fa-hands-helping mr-4"></i>LOGA Welfare Scheme</h2>
+            
+            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                <div class="grid md:grid-cols-4">
+                    <!-- Tab Buttons -->
+                    <button class="welfare-tab-btn py-4 px-6 bg-green-700 text-white font-bold border-b-2 border-green-800" data-tab="health">
+                        <i class="fas fa-heartbeat mr-2"></i> Health
+                    </button>
+                    <button class="welfare-tab-btn py-4 px-6 bg-green-600 text-white font-bold border-b-2 border-green-800" data-tab="education">
+                        <i class="fas fa-graduation-cap mr-2"></i> Education
+                    </button>
+                    <button class="welfare-tab-btn py-4 px-6 bg-green-500 text-white font-bold border-b-2 border-green-800" data-tab="empowerment">
+                        <i class="fas fa-hand-holding-heart mr-2"></i> Empowerment
+                    </button>
+                    <button class="welfare-tab-btn py-4 px-6 bg-green-400 text-white font-bold border-b-2 border-green-800" data-tab="palliatives">
+                        <i class="fas fa-utensils mr-2"></i> Palliatives
+                    </button>
+                </div>
+                
+                <!-- Tab Contents -->
+                <div class="p-8">
+                    <!-- Health Tab -->
+                    <div class="welfare-tab-content" id="health-tab">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6"><i class="fas fa-heartbeat mr-2"></i>Health Care Support</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-hospital mr-2"></i>Hospital Care</h4>
+                                <p class="text-gray-700 mb-6">Providing financial assistance for medical treatments, surgeries, and hospital bills for those in need within our community.</p>
+                                
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-file-medical mr-2"></i>Bill Support</h4>
+                                <p class="text-gray-700">Helping to cover medical expenses for individuals and families facing financial challenges.</p>
+                            </div>
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Health care" class="rounded-lg shadow-md w-full">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education Tab -->
+                    <div class="welfare-tab-content hidden" id="education-tab">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6"><i class="fas fa-graduation-cap mr-2"></i>Education Support</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-award mr-2"></i>Scholarships</h4>
+                                <p class="text-gray-700 mb-6">Providing educational scholarships to bright but financially disadvantaged students at various academic levels.</p>
+                                
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-file-alt mr-2"></i>WAEC/JAMB Assistance</h4>
+                                <p class="text-gray-700">Helping students register for and prepare for crucial national examinations to further their education.</p>
+                            </div>
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Education support" class="rounded-lg shadow-md w-full">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empowerment Tab -->
+                    <div class="welfare-tab-content hidden" id="empowerment-tab">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6"><i class="fas fa-hand-holding-heart mr-2"></i>Empowerment Programs</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-store mr-2"></i>Mini Business Support</h4>
+                                <p class="text-gray-700 mb-6">Providing seed capital and business training to help individuals start small businesses and become self-sufficient.</p>
+                                
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-tools mr-2"></i>Skills Training</h4>
+                                <p class="text-gray-700">Offering vocational training in various trades to equip people with marketable skills for sustainable livelihoods.</p>
+                            </div>
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Empowerment" class="rounded-lg shadow-md w-full">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palliatives Tab -->
+                    <div class="welfare-tab-content hidden" id="palliatives-tab">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6"><i class="fas fa-utensils mr-2"></i>Palliatives Distribution</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-bread-slice mr-2"></i>Food Support</h4>
+                                <p class="text-gray-700 mb-6">Providing food packages and essential groceries to families facing food insecurity, especially during difficult times.</p>
+                                
+                                <h4 class="text-lg font-bold text-green-700 mb-3"><i class="fas fa-tshirt mr-2"></i>Essential Items</h4>
+                                <p class="text-gray-700">Distributing clothing, hygiene products, and other necessities to those in need within our community.</p>
+                            </div>
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Palliatives" class="rounded-lg shadow-md w-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Outreach Section -->
+    <section class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-16"><i class="fas fa-graduation-cap mr-4"></i>Overwhelming Love Students Outreach</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4"><i class="fas fa-users mr-2"></i>Students Revival Movement</h3>
+                    <p class="text-gray-700 mb-6">Our vibrant campus ministry currently active at Nnamdi Azikiwe University (UNIZIK), Awka, focused on reaching students with the Gospel and discipling them in their faith.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h4 class="text-lg font-bold text-green-700 mb-2"><i class="fas fa-calendar-check mr-2"></i>Weekly Activities Include:</h4>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-book-open mr-2 text-green-600"></i>Bible study and prayer meetings</li>
+                            <li class="mb-2"><i class="fas fa-cross mr-2 text-green-600"></i>Evangelism and outreach programs</li>
+                            <li class="mb-2"><i class="fas fa-user-graduate mr-2 text-green-600"></i>Leadership training and discipleship</li>
+                            <li><i class="fas fa-hands mr-2 text-green-600"></i>Fellowship and worship gatherings</li>
+                        </ul>
+                    </div>
+                    
+                    <h4 class="text-lg font-bold text-green-700 mb-2"><i class="fas fa-rocket mr-2"></i>Future Plans:</h4>
+                    <p class="text-gray-700">We're expanding our reach to primary and secondary schools through age-appropriate programs that introduce young people to Christ and biblical values.</p>
+                </div>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Students ministry" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                            <img src="../images/logo11.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" />
+                        </div>
+                        <h3 class="text-xl font-bold">Overwhelming Love Ministries</h3>
+                    </div>
+                    <p class="text-green-200">Restoring the essence of life — God's love in the hearts of men.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-green-200 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="pages/about_our_church.html" class="text-green-200 hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="pages/ministry.html" class="text-green-200 hover:text-yellow-400 transition">Ministries</a></li>
+                        <li><a href="#contact" class="text-green-200 hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.facebook.com/lawrence.ubaoji" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bishoplawrenceubaoji?utm_source=ig_web_button_share_sheet&igsh=MW9wNDRidWxoY3FxdA==" class="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white hover:bg-yellow-500 hover:text-green-900 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-green-200">Subscribe to our newsletter for updates</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-800">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-green-900 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                
+                <div class="text-center text-green-300 text-sm">
+                    &copy; 2025 Overwhelming Love Ministries (LOGA). All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Welfare Tab Switching
+        const welfareTabBtns = document.querySelectorAll('.welfare-tab-btn');
+        const welfareTabContents = document.querySelectorAll('.welfare-tab-content');
+        
+        welfareTabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active classes from all buttons
+                welfareTabBtns.forEach(b => {
+                    b.classList.remove('bg-green-700', 'text-white');
+                    b.classList.add('bg-gray-200', 'text-gray-800');
+                });
+                
+                // Add active class to clicked button
+                this.classList.remove('bg-gray-200', 'text-gray-800');
+                this.classList.add('bg-green-700', 'text-white');
+                
+                // Hide all tab contents
+                welfareTabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                // Show the selected tab content
+                const tabId = this.getAttribute('data-tab') + '-tab';
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        // Animated Timeline
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineCircle = document.querySelector('.timeline-circle');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineLine = document.querySelector('.timeline-line');
+            
+            if (!timelineCircle || !timelineItems.length) return;
+            
+            // Calculate positions for each section
+            const sectionPositions = [];
+            timelineItems.forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                const lineRect = timelineLine.getBoundingClientRect();
+                const relativeTop = rect.top - lineRect.top + rect.height / 2;
+                sectionPositions.push(relativeTop);
+            });
+            
+            // Function to update circle position based on scroll
+            function updateTimelineCircle() {
+                const scrollTop = window.pageYOffset;
+                const timelineSection = document.querySelector('.py-20.bg-white');
+                const timelineRect = timelineSection.getBoundingClientRect();
+                
+                // Check if timeline is in view
+                if (timelineRect.top <= window.innerHeight && timelineRect.bottom >= 0) {
+                    const timelineTop = timelineSection.offsetTop;
+                    const timelineHeight = timelineSection.offsetHeight;
+                    const scrollProgress = (scrollTop - timelineTop + window.innerHeight / 2) / timelineHeight;
+                    
+                    // Find which section is currently most visible
+                    let currentSection = 0;
+                    let minDistance = Infinity;
+                    
+                    timelineItems.forEach((item, index) => {
+                        const itemRect = item.getBoundingClientRect();
+                        const distance = Math.abs(itemRect.top + itemRect.height / 2 - window.innerHeight / 2);
+                        
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            currentSection = index;
+                        }
+                    });
+                    
+                    // Calculate position for the sliding circle
+                    const totalSections = timelineItems.length;
+                    const sectionHeight = timelineHeight / totalSections;
+                    const targetPosition = (currentSection / (totalSections - 1)) * 100;
+                    
+                    // Apply smooth animation to circle
+                    timelineCircle.style.top = `${targetPosition}%`;
+                    timelineCircle.style.transform = 'translate(-50%, -50%)';
+                    
+                    // Add glow effect to current section
+                    timelineItems.forEach((item, index) => {
+                        if (index === currentSection) {
+                            item.classList.add('scale-105');
+                        } else {
+                            item.classList.remove('scale-105');
+                        }
+                    });
+                }
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', updateTimelineCircle);
+            
+            // Initial call
+            updateTimelineCircle();
+            
+            // Add intersection observer for smooth animations
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '-10% 0px -10% 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html> 
