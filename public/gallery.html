@@ -61,6 +61,63 @@ h1, h2, h3, h4 {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1100;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  z-index: 1100;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.modal-content-wrapper {
+  position: relative;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  margin-top: 5%;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.image-caption {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.image-counter {
+  font-size: 0.9em;
+  color: #ccc;
 }
 
 /* New CSS snippets added here */
@@ -188,8 +245,83 @@ h1, h2, h3, h4 {
             <!-- Gallery Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
                 
-                <!-- Radio Program Images -->
+                <!-- Radio Program Images (6 images) -->
+                <!-- Radio 1 -->
                 <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_01.jpg" alt="Radio Program" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Ministry</h3>
+                                <p class="text-sm">Eternal Matters Radio Show</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radio 2-6 -->
+                <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_02.jpg" alt="Radio Broadcasting" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Outreach</h3>
+                                <p class="text-sm">Spreading the Gospel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_03.jpg" alt="Radio Studio" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Studio</h3>
+                                <p class="text-sm">Broadcasting Hope</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_04.jpg" alt="Radio Session" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Session</h3>
+                                <p class="text-sm">Live Broadcasting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_05.jpg" alt="Radio Interview" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Interview</h3>
+                                <p class="text-sm">Special Guest Session</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group" data-category="radio">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/radio_06.jpg" alt="Radio Team" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Radio Team</h3>
+                                <p class="text-sm">Behind the Scenes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Celebration Images (12 images) -->
+                <div class="gallery-item group" data-category="family">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
                         <img src="../images/IMG-20250714-WA0056.jpg" alt="Eternal Matters Radio Program" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
@@ -215,9 +347,10 @@ h1, h2, h3, h4 {
                 </div>
 
                 <!-- Family Celebration Images -->
+                <!-- Family 1 -->
                 <div class="gallery-item group" data-category="family">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/IMG-20250714-WA0077.jpg" alt="Family Celebration Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/family (1).jpg" alt="Family Celebration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h3 class="font-bold text-lg mb-2">Family Celebration</h3>
@@ -227,22 +360,154 @@ h1, h2, h3, h4 {
                     </div>
                 </div>
 
+                <!-- Family 2 -->
                 <div class="gallery-item group" data-category="family">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/IMG-20250714-WA0065.jpg" alt="Family Day Celebration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/family (2).jpg" alt="Family Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h3 class="font-bold text-lg mb-2">Family Day</h3>
-                                <p class="text-sm">Celebrating Together</p>
+                                <h3 class="font-bold text-lg mb-2">Family Service</h3>
+                                <p class="text-sm">Sunday Worship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 3 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (3).jpg" alt="Family Prayer" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Prayer</h3>
+                                <p class="text-sm">Prayer Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 4 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (4).jpg" alt="Family Fellowship" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Fellowship</h3>
+                                <p class="text-sm">Community Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 5 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (5).jpg" alt="Family Worship" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Worship</h3>
+                                <p class="text-sm">Praise Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 6 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (6).jpg" alt="Family Event" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Event</h3>
+                                <p class="text-sm">Special Gathering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 7 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (7).jpg" alt="Family Ministry" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Ministry</h3>
+                                <p class="text-sm">Ministry Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 8 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (8).jpg" alt="Family Gathering" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Gathering</h3>
+                                <p class="text-sm">Fellowship Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 9 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (9).jpg" alt="Family Celebration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Celebration</h3>
+                                <p class="text-sm">Special Moments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 10 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (10).jpg" alt="Family Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Service</h3>
+                                <p class="text-sm">Worship Together</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 11 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (11).jpg" alt="Family Program" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Program</h3>
+                                <p class="text-sm">Special Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family 12 -->
+                <div class="gallery-item group" data-category="family">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/family (12).jpg" alt="Family Unity" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Family Unity</h3>
+                                <p class="text-sm">Together in Faith</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Youth Ministry Images -->
+                <!-- Youth 1 -->
                 <div class="gallery-item group" data-category="youth">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/515943230_1046617407585044_549745426632904433_n.jpg" alt="Youth Ministry" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/youth (1).jpg" alt="Youth Ministry" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h3 class="font-bold text-lg mb-2">Youth Ministry</h3>
@@ -252,25 +517,157 @@ h1, h2, h3, h4 {
                     </div>
                 </div>
 
+                <!-- Youth 2 -->
                 <div class="gallery-item group" data-category="youth">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/515940587_1046616720918446_5130751458138533552_n.jpg" alt="Youth Activities" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/youth (2).jpg" alt="Youth Activities" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h3 class="font-bold text-lg mb-2">Youth Activities</h3>
+                                <h3 class="font-bold text-lg mb-2">Youth Fellowship</h3>
                                 <p class="text-sm">Building Future Leaders</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Consecration Images -->
-                <div class="gallery-item group" data-category="consecration">
+                <!-- Youth 3 -->
+                <div class="gallery-item group" data-category="youth">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/WhatsApp Image 2025-07-14 at 12.26.44_c8c1e0b7.jpg" alt="Bishop and Wife Consecration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/youth (3).jpg" alt="Youth Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h3 class="font-bold text-lg mb-2">Consecration</h3>
+                                <h3 class="font-bold text-lg mb-2">Youth Service</h3>
+                                <p class="text-sm">Worship Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 4 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (4).jpg" alt="Youth Prayer" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Prayer</h3>
+                                <p class="text-sm">Prayer Meeting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 5 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (5).jpg" alt="Youth Event" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Event</h3>
+                                <p class="text-sm">Special Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 6 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (6).jpg" alt="Youth Bible Study" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Bible Study</h3>
+                                <p class="text-sm">Word Study</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 7 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (7).jpg" alt="Youth Worship" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Worship</h3>
+                                <p class="text-sm">Praise Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 8 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (8).jpg" alt="Youth Meeting" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Meeting</h3>
+                                <p class="text-sm">Group Discussion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 9 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (9).jpg" alt="Youth Gathering" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Gathering</h3>
+                                <p class="text-sm">Fellowship Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 10 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (10).jpg" alt="Youth Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Service</h3>
+                                <p class="text-sm">Sunday Service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 11 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (11).jpg" alt="Youth Program" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Program</h3>
+                                <p class="text-sm">Special Event</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youth 12 -->
+                <div class="gallery-item group" data-category="youth">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/youth (12).jpg" alt="Youth Ministry" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Youth Ministry</h3>
+                                <p class="text-sm">Closing Session</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration Images -->
+                <!-- Consecration 1 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (1).jpg" alt="Bishop and Wife Consecration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Episcopal Consecration</h3>
                                 <p class="text-sm">RT REV'D LAWRENCE UBAOJI</p>
                                 <p class="text-xs">and REV'D PEACE NKIRUKA UBAOJI</p>
                             </div>
@@ -278,22 +675,154 @@ h1, h2, h3, h4 {
                     </div>
                 </div>
 
+                <!-- Consecration 2 -->
                 <div class="gallery-item group" data-category="consecration">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/IMG-20250714-WA0052.jpg" alt="Consecration Ceremony" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/consecration (2).jpg" alt="Consecration Ceremony" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h3 class="font-bold text-lg mb-2">Consecration Day</h3>
-                                <p class="text-sm">A Special Moment</p>
+                                <h3 class="font-bold text-lg mb-2">Consecration Service</h3>
+                                <p class="text-sm">Sacred Ceremony</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 3 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (3).jpg" alt="Consecration Blessing" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Episcopal Blessing</h3>
+                                <p class="text-sm">Holy Ordination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 4 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (4).jpg" alt="Consecration Prayer" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Consecration Prayer</h3>
+                                <p class="text-sm">Moment of Prayer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 5 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (5).jpg" alt="Consecration Celebration" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Consecration Joy</h3>
+                                <p class="text-sm">Celebration Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 6 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (6).jpg" alt="Consecration Procession" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Sacred Procession</h3>
+                                <p class="text-sm">Holy Walk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 7 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (7).jpg" alt="Consecration Worship" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Worship Time</h3>
+                                <p class="text-sm">Praise and Worship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 8 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (8).jpg" alt="Consecration Gathering" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Sacred Assembly</h3>
+                                <p class="text-sm">Holy Gathering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 9 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (9).jpg" alt="Consecration Moment" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Sacred Moment</h3>
+                                <p class="text-sm">Divine Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 10 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (10).jpg" alt="Consecration Fellowship" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Holy Fellowship</h3>
+                                <p class="text-sm">Together in Faith</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 11 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (11).jpg" alt="Consecration Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Holy Service</h3>
+                                <p class="text-sm">Sacred Worship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consecration 12 -->
+                <div class="gallery-item group" data-category="consecration">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/consecration (12).jpg" alt="Consecration Blessing" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Final Blessing</h3>
+                                <p class="text-sm">Concluding Prayers</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- LGSS Images -->
+                <!-- LGSS 1 -->
                 <div class="gallery-item group" data-category="lgss">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/LOGA Security.jpg" alt="LOGA Security Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/lgss (1).jpg" alt="LOGA Security Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h3 class="font-bold text-lg mb-2">LGSS</h3>
@@ -303,13 +832,66 @@ h1, h2, h3, h4 {
                     </div>
                 </div>
 
+                <!-- LGSS 2 -->
                 <div class="gallery-item group" data-category="lgss">
                     <div class="relative overflow-hidden rounded-lg shadow-lg">
-                        <img src="../images/Loga Security2.jpg" alt="Security Team" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <img src="../images/lgss (2).jpg" alt="Security Team" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                             <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <h3 class="font-bold text-lg mb-2">Security Team</h3>
                                 <p class="text-sm">Protecting Our Community</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGSS 3 -->
+                <div class="gallery-item group" data-category="lgss">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/lgss (3).jpg" alt="Security Training" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Security Training</h3>
+                                <p class="text-sm">Professional Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGSS 4 -->
+                <div class="gallery-item group" data-category="lgss">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/lgss (4).jpg" alt="Security Operations" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Security Operations</h3>
+                                <p class="text-sm">Daily Operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGSS 5 -->
+                <div class="gallery-item group" data-category="lgss">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/lgss (5).jpg" alt="Security Meeting" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Security Meeting</h3>
+                                <p class="text-sm">Team Briefing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LGSS 6 -->
+                <div class="gallery-item group" data-category="lgss">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="../images/lgss (6).jpg" alt="Security Service" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-bold text-lg mb-2">Security Service</h3>
+                                <p class="text-sm">Excellence in Service</p>
                             </div>
                         </div>
                     </div>
@@ -421,7 +1003,15 @@ h1, h2, h3, h4 {
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <button id="prevButton" class="nav-btn prev-btn">&lt;</button>
+        <button id="nextButton" class="nav-btn next-btn">&gt;</button>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImage">
+            <div class="image-info">
+                <div id="imageCaption" class="image-caption"></div>
+                <div id="imageCounter" class="image-counter"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -479,24 +1069,73 @@ h1, h2, h3, h4 {
     </footer>
 
     <script>
-        // Gallery Filtering
+        // Gallery Filtering and Navigation
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        const prevBtn = document.getElementById('prevButton');
+        const nextBtn = document.getElementById('nextButton');
+        const imageCaption = document.getElementById('imageCaption');
+        const imageCounter = document.getElementById('imageCounter');
 
+        let currentCategory = 'all';
+        let currentImageIndex = 0;
+        let categoryImages = [];
+
+        // Category image counts
+        const categoryCounts = {
+            'radio': 6,
+            'family': 12,
+            'youth': 12,
+            'consecration': 12,
+            'lgss': 6,
+            'outreach': 12,
+            'children': 12
+        };
+
+        function generateImagePath(category, index) {
+            const paddedIndex = String(index).padStart(2, '0');
+            if (category === 'outreach') {
+                return `../images/outreach_${paddedIndex}.jpg`;
+            }
+            return `../images/${category}_${paddedIndex}.jpg`;
+        }
+
+        function updateModalImage() {
+            const currentImage = categoryImages[currentImageIndex];
+            modalImg.src = currentImage.src;
+            modalImg.alt = currentImage.alt;
+            
+            const category = currentImage.closest('.gallery-item').getAttribute('data-category');
+            const totalImages = categoryCounts[category] || categoryImages.length;
+            
+            imageCaption.textContent = currentImage.alt;
+            imageCounter.textContent = `Image ${currentImageIndex + 1} of ${totalImages}`;
+        }
+
+        function loadCategoryImages(category) {
+            const items = category === 'all' 
+                ? Array.from(galleryItems)
+                : Array.from(galleryItems).filter(item => item.getAttribute('data-category') === category);
+            
+            categoryImages = items.map(item => item.querySelector('img'));
+        }
+
+        // Gallery Filtering
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => {
                     b.classList.remove('active', 'bg-green-600', 'text-white');
                     b.classList.add('bg-gray-200', 'text-gray-700');
                 });
                 
-                // Add active class to clicked button
                 this.classList.remove('bg-gray-200', 'text-gray-700');
                 this.classList.add('active', 'bg-green-600', 'text-white');
                 
-                // Filter gallery items
                 const filter = this.getAttribute('data-filter');
+                currentCategory = filter;
                 
                 galleryItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -509,36 +1148,50 @@ h1, h2, h3, h4 {
             });
         });
 
-        // Image Modal
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.close');
+        // Modal Navigation
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + categoryImages.length) % categoryImages.length;
+            updateModalImage();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % categoryImages.length;
+            updateModalImage();
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(event) {
+            if (modal.style.display === 'block') {
+                if (event.key === 'ArrowLeft') {
+                    prevBtn.click();
+                } else if (event.key === 'ArrowRight') {
+                    nextBtn.click();
+                } else if (event.key === 'Escape') {
+                    modal.style.display = 'none';
+                }
+            }
+        });
 
         // Open modal when clicking on gallery items
         galleryItems.forEach(item => {
             item.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                loadCategoryImages(category);
+                
                 const img = this.querySelector('img');
+                currentImageIndex = categoryImages.findIndex(image => image.src === img.src);
+                
                 modal.style.display = 'block';
-                modalImg.src = img.src;
-                modalImg.alt = img.alt;
+                updateModalImage();
             });
         });
 
         // Close modal
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
-
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+        
         // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
+        window.addEventListener('click', event => {
             if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
             }
         });
