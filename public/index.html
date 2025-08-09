@@ -433,7 +433,7 @@ h1, h2, h3, h4 {
             <div id="default-carousel" class="relative w-full max-w-2xl mx-auto" data-carousel="slide">
                 <!-- Carousel wrapper with side arrows -->
                 <div class="relative flex items-center justify-center">
-                    <!-- Left arrow -->
+                    <!-- Left arrow (desktop/tablet) -->
                     <button type="button" class="absolute left-0 z-30 flex items-center justify-center w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white cursor-pointer group focus:outline-none transition-colors" data-carousel-prev>
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -617,13 +617,29 @@ h1, h2, h3, h4 {
                     </div>
                 </div>
                     
-                    <!-- Right arrow -->
+                    <!-- Right arrow (desktop/tablet) -->
                     <button type="button" class="absolute right-0 z-30 flex items-center justify-center w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-white cursor-pointer group focus:outline-none transition-colors" data-carousel-next>
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                         </svg>
                         <span class="sr-only">Next</span>
                 </button>
+                </div>
+
+                <!-- Mobile nav buttons on the same line -->
+                <div class="flex md:hidden justify-center mt-4 space-x-4">
+                    <button type="button" class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-green-600 hover:bg-green-700 text-white text-sm font-semibold transition-colors" data-carousel-prev>
+                        <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        Previous
+                    </button>
+                    <button type="button" class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-green-600 hover:bg-green-700 text-white text-sm font-semibold transition-colors" data-carousel-next>
+                        Next
+                        <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                    </button>
                 </div>
                 
                 <!-- Slider indicators -->
