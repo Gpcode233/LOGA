@@ -20,6 +20,9 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Prevent horizontal overflow on mobile */
+html, body { overflow-x: hidden; }
+
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
@@ -158,11 +161,11 @@ h1, h2, h3, h4 {
 
 
     <!-- Header -->
-    <header class="fixed w-full bg-white shadow-md z-40">
+    <header class="fixed w-full bg-white shadow-md z-40 overflow-x-clip">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
+            <div class="flex items-center flex-1 min-w-0">
                 <img src="images/favicon.ico" alt="Overwhelming Love Ministries Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
-                <h1 class="text-xl font-bold text-green-800">Overwhelming Love Ministries</h1>
+                <h1 class="text-xl font-bold text-green-800 truncate">Overwhelming Love Ministries</h1>
             </div>
             
             <nav class="hidden md:flex space-x-8">
@@ -407,8 +410,8 @@ h1, h2, h3, h4 {
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Partner With Us</h2>
             <div class="max-w-4xl mx-auto">
                 <p class="text-center text-lg mb-12">Join us in advancing God's kingdom through various partnership opportunities. Your support helps us reach more lives with the Gospel and make a tangible difference in our community.</p>
-                <div class="mt-12 text-center">
-                    <a href="/partnership.html" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover mr-4">
+                <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-4">
+                    <a href="/partnership.html" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
                         Become a Partner
                     </a>
                     <a href="/partnership.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition btn-hover">
@@ -639,8 +642,8 @@ h1, h2, h3, h4 {
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg shadow-xl overflow-hidden">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pho0XCVBuGs?si=kjE-hnJTz2MDAXcn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="aspect-video bg-black rounded-lg shadow-xl overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/pho0XCVBuGs?si=kjE-hnJTz2MDAXcn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 

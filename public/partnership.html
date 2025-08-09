@@ -15,6 +15,9 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
 
+/* Prevent horizontal overflow on mobile */
+html, body { overflow-x: hidden; }
+
 /* New CSS snippets added here */
 
 /* Make the navbar and menu icon visible on smaller screens */
@@ -77,11 +80,12 @@ h1, h2, h3, h4 {
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed w-full bg-white shadow-md z-40">
+    <header class="fixed w-full bg-white shadow-md z-40 overflow-x-clip">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
+            <div class="flex items-center flex-1 min-w-0">
                 <img src="../images/favicon.ico" alt="Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
-                <h1 class="text-xl font-bold text-green-800">Overwhelming Love Ministries</h1>
+                <h1 class="text-xl font-bold text-green-800 truncate">Overwhelming Love Ministries</h1>
+            </div>
             <nav class="hidden md:flex space-x-8">
                     <a href="/index.html" class="text-green-800 hover:text-yellow-500 transition">Home</a>
                     <a href="/about_our_church.html" class="text-green-800 hover:text-yellow-500 transition">About</a>
@@ -90,7 +94,6 @@ h1, h2, h3, h4 {
                     <a href="/blog.html" class="text-green-800 hover:text-yellow-500 transition">Blog</a>
                     <a href="/partnership.html" class="text-green-800 hover:text-yellow-500 transition font-bold">Partnership</a>
             </nav>
-                  
         </div>
     </header>
     <!-- Hero Section -->
