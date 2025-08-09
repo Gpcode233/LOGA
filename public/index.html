@@ -170,6 +170,7 @@ h1, h2, h3, h4 {
                 <a href="/about_our_church.html" class="text-green-800 hover:text-yellow-500 transition">About</a>
                 <a href="/ministry.html" class="text-green-800 hover:text-yellow-500 transition">Ministries</a>
                 <a href="/gallery.html" class="text-green-800 hover:text-yellow-500 transition">Gallery</a>
+                <a href="/blog.html" class="text-green-800 hover:text-yellow-500 transition">Blog</a>
                 <a href="/partnership.html" class="text-green-800 hover:text-yellow-500 transition">Partnership</a>
                 <a href="#contact" class="text-green-800 hover:text-yellow-500 transition">Contact</a>
             </nav>
@@ -186,6 +187,7 @@ h1, h2, h3, h4 {
                 <a href="/about_our_church.html" class="text-green-800 hover:text-yellow-500 transition">About</a>
                 <a href="/ministry.html" class="text-green-800 hover:text-yellow-500 transition">Ministries</a>
                 <a href="/gallery.html" class="text-green-800 hover:text-yellow-500 transition">Gallery</a>
+                <a href="/blog.html" class="text-green-800 hover:text-yellow-500 transition">Blog</a>
                 <a href="/partnership.html" class="text-green-800 hover:text-yellow-500 transition">Partnership</a>
                 <a href="#contact" class="text-green-800 hover:text-yellow-500 transition">Contact</a>
             </div>
@@ -193,22 +195,55 @@ h1, h2, h3, h4 {
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white pt-20">
-        <div class="container mx-auto px-4 py-20 text-center fade-in">
-            <div class="cross-icon top-20 left-20 text-6xl text-white">✝</div>
-            <div class="cross-icon bottom-20 right-20 text-6xl text-white">✝</div>
-            
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Restoring the Essence of Life</h1>
-            <p class="text-xl md:text-2xl mb-8">God's Love in the Hearts of Men</p>
-            <p class="text-lg md:text-xl mb-12">Overwhelming Love Ministries a.k.a Love Generals Assembly</p>
-            
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
-                    Join Our Sunday Celebration
-                </a>
-                <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition btn-hover">
-                    Watch on YouTube
-                </a>
+    <section id="home" class="relative min-h-screen pt-20 text-white">
+        <!-- Hero Carousel -->
+        <div id="hero-carousel" class="relative w-full h-[80vh] md:h-screen" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-full overflow-hidden rounded-none">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="images/heroslide.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="images/heroslide0.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="images/heroslide1.jpg" class="absolute block w-full h-full object-cover" alt="Ministry in action" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="images/heroslide2.jpg" class="absolute block w-full h-full object-cover" alt="Prayer and worship" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="images/heroslide3.jpg" class="absolute block w-full h-full object-cover" alt="Fellowship and joy" />
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+            </div>
+            <!-- Slider controls removed for a cleaner, more professional look -->
+        </div>
+
+        <!-- Overlay hero content -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="container mx-auto px-4 text-center fade-in">
+                <div class="cross-icon top-20 left-20 text-6xl text-white">✝</div>
+                <div class="cross-icon bottom-20 right-20 text-6xl text-white">✝</div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Restoring the Essence of Life</h1>
+                <p class="text-xl md:text-2xl mb-8">God's Love in the Hearts of Men</p>
+                <p class="text-lg md:text-xl mb-12">Overwhelming Love Ministries a.k.a Love Generals Assembly</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
+                        Join Our Sunday Celebration
+                    </a>
+                    <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition btn-hover">
+                        Watch on YouTube
+                    </a>
+                </div>
             </div>
         </div>
     </section>
