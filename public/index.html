@@ -161,7 +161,7 @@ h1, h2, h3, h4 {
     <header class="fixed w-full bg-white shadow-md z-40">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="images/logo11.jpg" alt="Overwhelming Love Ministries Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
+                <img src="images/favicon.ico" alt="Overwhelming Love Ministries Logo" class="w-12 h-12 rounded-full object-cover mr-3 border-2 border-green-700 shadow" />
                 <h1 class="text-xl font-bold text-green-800">Overwhelming Love Ministries</h1>
             </div>
             
@@ -195,54 +195,57 @@ h1, h2, h3, h4 {
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen pt-20 text-white">
-        <!-- Hero Carousel -->
-        <div id="hero-carousel" class="relative w-full h-[80vh] md:h-screen" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative h-full overflow-hidden rounded-none">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="images/heroslide.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
-                    <div class="absolute inset-0 bg-black/60"></div>
+    <section id="home" class="relative pt-24 text-white">
+        <!-- Fixed-height hero container -->
+        <div class="relative w-full h-[480px] md:h-[560px] overflow-hidden">
+            <!-- Hero Carousel behind overlays -->
+            <div id="hero-carousel" class="absolute inset-0" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-full overflow-hidden rounded-none">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="images/heroslide.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
+                    </div>
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="images/heroslide0.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="images/heroslide1.jpg" class="absolute block w-full h-full object-cover" alt="Ministry in action" />
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="images/heroslide2.jpg" class="absolute block w-full h-full object-cover" alt="Prayer and worship" />
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="images/heroslide3.jpg" class="absolute block w-full h-full object-cover" alt="Fellowship and joy" />
+                    </div>
                 </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="images/heroslide0.jpg" class="absolute block w-full h-full object-cover" alt="Worship and community" />
-                    <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="images/heroslide1.jpg" class="absolute block w-full h-full object-cover" alt="Ministry in action" />
-                    <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="images/heroslide2.jpg" class="absolute block w-full h-full object-cover" alt="Prayer and worship" />
-                    <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="images/heroslide3.jpg" class="absolute block w-full h-full object-cover" alt="Fellowship and joy" />
-                    <div class="absolute inset-0 bg-black/60"></div>
-                </div>
+                <!-- Slider controls removed for a cleaner, more professional look -->
             </div>
-            <!-- Slider controls removed for a cleaner, more professional look -->
-        </div>
 
-        <!-- Overlay hero content -->
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="container mx-auto px-4 text-center fade-in">
-                <div class="cross-icon top-20 left-20 text-6xl text-white">✝</div>
-                <div class="cross-icon bottom-20 right-20 text-6xl text-white">✝</div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Restoring the Essence of Life</h1>
-                <p class="text-xl md:text-2xl mb-8">God's Love in the Hearts of Men</p>
-                <p class="text-lg md:text-xl mb-12">Overwhelming Love Ministries a.k.a Love Generals Assembly</p>
-                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
-                        Join Our Sunday Celebration
-                    </a>
-                    <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition btn-hover">
-                        Watch on YouTube
-                    </a>
+            <!-- Transparent green overlay across slideshow -->
+            <div class="absolute inset-0 bg-green-800/30 z-10 pointer-events-none"></div>
+
+            <!-- Overlay hero content panel -->
+            <div class="absolute inset-0 z-20 flex items-center justify-center px-4">
+                <div class="bg-green-900/40 border border-green-400/40 rounded-xl shadow-2xl backdrop-blur-sm px-6 py-8 md:px-10 md:py-12 text-center fade-in max-w-3xl w-full">
+                    <div class="relative">
+                        <div class="cross-icon top-4 left-4 text-4xl md:text-5xl text-white">✝</div>
+                        <div class="cross-icon bottom-4 right-4 text-4xl md:text-5xl text-white">✝</div>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">Restoring the Essence of Life</h1>
+                    <p class="text-lg md:text-2xl mb-4">God's Love in the Hearts of Men</p>
+                    <p class="text-base md:text-xl mb-8">Overwhelming Love Ministries a.k.a Love Generals Assembly</p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                        <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition btn-hover">
+                            Join Our Sunday Celebration
+                        </a>
+                        <a href="https://www.youtube.com/@overwhelmingloveministries5134" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition btn-hover">
+                            Watch on YouTube
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -750,7 +753,7 @@ h1, h2, h3, h4 {
                 <div>
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3 overflow-hidden">
-                            <img src="../images/logo11.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" />
+                            <img src="../images/favicon.ico" alt="Logo" class="w-full h-full object-cover rounded-full" />
                         </div>
                         <h3 class="text-xl font-bold">Overwhelming Love Ministries</h3>
                     </div>
